@@ -8,15 +8,27 @@
                             <small>Subheading</small>
                         </h1>
 
-
+                        
                         <?php 
 
-                        $sql = "SELECT * FROM users WHERE id=1";
-                        $result = $database->query($sql);
-                        $user_found = mysqli_fetch_array($result);
 
-                        echo $user_found['username'];
+                      //  $result_set = User::find_all_users();
+                        //while($row = mysqli_fetch_array($result_set)){
+                          //  echo $row['username'] . "<br>";
+                        //}
+
+                         
+                        //$found_user = User::find_user_by_id(1);
+
+                        //$user = User::instantation($found_user);
                         
+                        //echo $user->id;
+                        
+
+                        
+
+                         $found_user = User::find_user_by_id(2);
+                         echo  $found_user->username;
                        
                         ?>
 
